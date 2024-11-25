@@ -1,0 +1,17 @@
+# config/db.py
+storage/recordings
+test.ipynb
+*.jpg
+*.mp4
+mqtt/__pycache__
+mqtt/speed_estimation/__pycache__
+mqtt/tg_bot/__pycache__
+config/frigate.db
+config/.timeline
+config/.vacuum
+config/frigate.db-shm
+config/frigate.db-wal
+storage/clips/preview_restart_cache
+config/model_cache/tensorrt
+config/backup.db
+config/backup_config.yaml

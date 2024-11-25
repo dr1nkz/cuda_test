@@ -1,0 +1,20 @@
+services:
+
+  cuda_test:
+    container_name: cuda_test
+    restart: unless-stopped
+    build: ./service
+    environment:
+      - PYTHONPATH=/mqtt/speed_estimation
+      # - PYTHONPATH=/mqtt
+    command: [ "python3", "/script.py" ]
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ./service:/service
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
