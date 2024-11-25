@@ -7,7 +7,7 @@ services:
     environment:
       - PYTHONPATH=/mqtt/speed_estimation
       # - PYTHONPATH=/mqtt
-    command: [ "python3", "/service/script.py" ]
+      # command: [ "python3", "/service/script.py" ]
     volumes:
       - /etc/localtime:/etc/localtime
       - ./service:/service
